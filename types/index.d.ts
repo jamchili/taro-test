@@ -18,5 +18,18 @@ export type userInfoType = {
   tokenObj: loginRes
 }
 
+export type channelsType = {
+  id: number,
+  name: string
+}
+
+export type UserChannelRes = { channels: channelsType[] }
+
+
+export type ArticleListReq = {
+  channel_id: number,
+  timestamp: number
+}
+
 
 

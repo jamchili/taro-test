@@ -11,18 +11,19 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
   const baseConfig: UserConfigExport<'webpack5'> = {
     projectName: 'taro_pro1',
     date: '2025-8-27',
-    designWidth(input) {
-      // 配置 NutUI 375 尺寸
-      if ((input as any)?.file?.replace(/\\+/g, '/').indexOf('@nutui') > -1) {
-        return 375
-      }
-      // 全局使用 Taro 默认的 750 尺寸
-      return 750
-    },
+    // designWidth(input) {
+    //   // 配置 NutUI 375 尺寸
+    //   if ((input as any)?.file?.replace(/\\+/g, '/').indexOf('@nutui') > -1) {
+    //     return 375
+    //   }
+    //   // 全局使用 Taro 默认的 750 尺寸
+    //   return 375
+    // },
+    designWidth: 375,
     deviceRatio: {
       640: 2.34 / 2,
       750: 1,
-      375: 2,
+      375: 2 / 1,
       828: 1.81 / 2
     },
     sourceRoot: 'src',
@@ -51,6 +52,11 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
     },
     mini: {
       postcss: {
+        // pxtorem: {
+        //   rootValue: 37.5,  // 375设计稿下：1rem = 37.5px
+        //   propList: ['*'],  // 转换所有属性
+        //   minPixelValue: 2  // 不转换小于2px的单位
+        // },
         pxtransform: {
           enable: true,
           config: {

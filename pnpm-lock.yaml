@@ -11,6 +11,9 @@ importers:
       '@babel/runtime':
         specifier: ^7.7.7
         version: 7.28.3
+      '@nutui/icons-vue-taro':
+        specifier: ^0.0.9
+        version: 0.0.9
       '@nutui/nutui-taro':
         specifier: ^4.2.8
         version: 4.3.14(unplugin-vue-components@0.26.0(@babel/parser@7.28.3)(rollup@3.29.5)(vue@3.5.20(typescript@5.9.2)))(vue@3.5.20(typescript@5.9.2))
@@ -68,6 +71,9 @@ importers:
       pinia-plugin-persistedstate:
         specifier: ^4.5.0
         version: 4.5.0(pinia@3.0.3(typescript@5.9.2)(vue@3.5.20(typescript@5.9.2)))
+      postcss-pxtorem:
+        specifier: ^6.1.0
+        version: 6.1.0(postcss@8.5.6)
       vue:
         specifier: ^3.3.0
         version: 3.5.20(typescript@5.9.2)
@@ -5035,6 +5041,11 @@ packages:
     engines: {node: '>= 18'}
     peerDependencies:
       postcss: ^8
+
+  postcss-pxtorem@6.1.0:
+    resolution: {integrity: sha512-ROODSNci9ADal3zUcPHOF/K83TiCgNSPXQFSbwyPHNV8ioHIE4SaC+FPOufd8jsr5jV2uIz29v1Uqy1c4ov42g==}
+    peerDependencies:
+      postcss: ^8.0.0
 
   postcss-pxtransform@4.1.5:
     resolution: {integrity: sha512-Hz2UK8jczKa+fVDySVYMUkrYBT4Rc2lSxS89XDx8U6j0IshtQjU3XRYOTS5l63Ij2kQgOKEG9R+dNsM+3MM9vA==}
@@ -11752,6 +11763,10 @@ snapshots:
       postcss-value-parser: 4.2.0
 
   postcss-plugin-constparse@4.1.5(postcss@8.5.6):
+    dependencies:
+      postcss: 8.5.6
+
+  postcss-pxtorem@6.1.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
 

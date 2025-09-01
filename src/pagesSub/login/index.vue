@@ -49,7 +49,7 @@ const userInfo = useuserInfoStore()
 
 const loginFn = async () => {
   const res = await loginAPI(formData)
-  // console.log('---', )
+  console.log('---', res)
   userInfo.addToken(res.data)
 
   Taro.switchTab({
