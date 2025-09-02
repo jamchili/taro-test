@@ -24,11 +24,10 @@ const toRouter = () => {
 
 //获取频道数据
 const getChannelsList = async () => {
-  const res = await getUserChannelsApi()
-  channelList.value = res.data.channels
-
-  const res2 = await getChannelsApi()
-  allList.value = res2.data.channels
+  // const res = await getUserChannelsApi()
+  // channelList.value = res.data.channels
+  // const res2 = await getChannelsApi()
+  // allList.value = res2.data.channels
 }
 
 onMounted(async () => {
