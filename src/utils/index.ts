@@ -1,3 +1,8 @@
 const addEvent = () => {
-  console.log('hhhhhh')
+  console.log('aaaaaaaaaaaaaaaaaaa');
+}
+
+
+const editEvent = () => {
+  console.log('cccccccccccccccccccc');
 }

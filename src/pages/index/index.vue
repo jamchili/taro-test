@@ -55,6 +55,12 @@ const removeEvent = (e: channelsType) => {
 
 <template>
   <nav>我是导航栏</nav>
+  <div>aaaaaaaaaa</div>
+  <div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quam quod
+    mollitia adipisci laborum fugiat repudiandae culpa ipsum? Cum tenetur in
+    voluptatum ab modi blanditiis quas sequi eaque fugit provident.
+  </div>
   <div class="JD-icon">
     <IconFont name="horizontal" size="24" @click="toggleChannelEdit"></IconFont>
   </div>
