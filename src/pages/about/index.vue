@@ -6,7 +6,7 @@
       :name="index"
       title="标签 1"
     >
-      内容 1
+      内容 3333
     </TabPane>
   </Tabs>
 
