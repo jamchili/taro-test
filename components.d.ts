@@ -17,5 +17,9 @@ declare module 'vue' {
     NutSpace: typeof import('@nutui/nutui-taro')['Space']
     NutTabPane: typeof import('@nutui/nutui-taro')['TabPane']
     NutTabs: typeof import('@nutui/nutui-taro')['Tabs']
+    VanTab: typeof import('./src/components/van-tab.vue')['default']
+    VanTabs: typeof import('./src/components/van-tabs.vue')['default']
+    XTab: typeof import('./src/components/x-tab.vue')['default']
+    XTabs: typeof import('./src/components/x-tabs.vue')['default']
   }
 }

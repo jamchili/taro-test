@@ -17,11 +17,6 @@ const emits = defineEmits<{
 const show = ref(false)
 
 const editChannelList = computed(() => {
-  // return props.allList.filter(v => {
-  //   // 检查 ownList 中是否存在与 v.id 相同的项
-  //   return !props.ownList.some(i => i.id === v.id)
-  // })
-
   return props.allList.filter(i => {
     return !props.ownList.some(v => v.id === i.id)
   })

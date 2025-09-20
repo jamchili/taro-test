@@ -24,10 +24,10 @@ const toRouter = () => {
 
 //获取频道数据
 const getChannelsList = async () => {
-  // const res = await getUserChannelsApi()
-  // channelList.value = res.data.channels
-  // const res2 = await getChannelsApi()
-  // allList.value = res2.data.channels
+  const res = await getUserChannelsApi()
+  channelList.value = res.data.channels
+  const res2 = await getChannelsApi()
+  allList.value = res2.data.channels
 }
 
 onMounted(async () => {
@@ -59,22 +59,24 @@ const removeEvent = (e: channelsType) => {
     <IconFont name="horizontal" size="24" @click="toggleChannelEdit"></IconFont>
   </div>
 
-  <nut-tabs
-    v-model="tabsIndex"
-    title-scroll
-    title-gutter="10"
-    name="tabName"
-    :ellipsis="false"
-  >
-    <nut-tab-pane
-      v-for="(item, index) in channelList"
-      :key="index"
-      :title="item.name"
-      :pane-key="index"
+  <div class="nut-container">
+    <nut-tabs
+      v-model="tabsIndex"
+      title-scroll
+      title-gutter="10"
+      name="tabName"
+      :ellipsis="false"
     >
-      <div>下标{{ tabsIndex }}</div>
-    </nut-tab-pane>
-  </nut-tabs>
+      <nut-tab-pane
+        v-for="(item, index) in channelList"
+        :key="index"
+        :title="item.name"
+        :pane-key="index"
+      >
+        <div>下标{{ tabsIndex }}</div>
+      </nut-tab-pane>
+    </nut-tabs>
+  </div>
   <!-- 编辑组件 -->
   <ChannelEdit
     :all-list="allList"
@@ -84,10 +86,11 @@ const removeEvent = (e: channelsType) => {
     @add-x="channelList.push($event)"
     @remove-x="channelList = channelList.filter(v => v.id != $event)"
   ></ChannelEdit>
-  <!-- <nut-button type="primary" @click="CounterStore.addEvent">点我啊</nut-button>
-  <button @click="toRouter">路由跳转</button> -->
 </template>
 <style lang="scss" scoped>
+.nut-container {
+  width: 60vw;
+}
 nav {
   height: 54px;
   line-height: 54px;
